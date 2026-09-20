@@ -1,0 +1,6 @@
+{
+  "name": "Hotel Royal Retreat, Shirdi",
+  "description": "Official website for Hotel Royal Retreat, Shirdi — contemporary accommodation and Sattva pure vegetarian dining near Sai Baba Temple Gate No. 2.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

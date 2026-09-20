@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Cinzel", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --color-espresso: #1e1611;
+  --color-walnut: #2a1f18;
+  --color-charcoal: #222120;
+  --color-sand: #f0ece1;
+  --color-ivory: #fcfbf7;
+  --color-cream: #f7f4ed;
+  --color-brass: #b38f58;
+  --color-champagne: #c5a880;
+  --color-champagne-light: #e4d5be;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #fcfbf7;
+    color: #222120;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  h1, h2, h3, .font-serif-title {
+    font-family: var(--font-serif);
+  }
+
+  /* Prevent automatic iOS zooming on form focus by ensuring 16px minimum font */
+  @media screen and (max-width: 767px) {
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+  }
+}
+
+/* Safe area bottom padding for mobile devices (iPhone home indicator) */
+.safe-bottom {
+  padding-bottom: max(0.625rem, env(safe-area-inset-bottom));
+}
+
+/* Custom scrollbar hiding utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
